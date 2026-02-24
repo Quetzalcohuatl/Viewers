@@ -21,6 +21,7 @@ export const extensionDependencies = {
   // Can derive the versions at least process.env.from npm_package_version
   ...basicDependencies,
   '@ohif/extension-measurement-tracking': '^3.0.0',
+  'ai-copilot': '0.0.1' 
 };
 
 export const longitudinalInstance = {
@@ -29,7 +30,7 @@ export const longitudinalInstance = {
   props: {
     ...basicLayout.props,
     leftPanels: [tracked.thumbnailList],
-    rightPanels: [cornerstone.segmentation, tracked.measurements],
+    rightPanels: [cornerstone.segmentation, tracked.measurements, 'ai-copilot.panelModule.ai-copilot-panel'],
     viewports: [
       {
         namespace: tracked.viewport,
