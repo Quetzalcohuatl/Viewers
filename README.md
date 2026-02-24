@@ -1,5 +1,51 @@
 <!-- prettier-ignore-start -->
 <div align="center">
+  <h1>OHIF Medical Imaging Viewer: MedGemma Lens Edition</h1>
+  <p><strong>MedGemma Lens</strong> is an AI-augmented version of the OHIF Viewer, integrating Google's MedGemma HAI-DEF model for contextual, multimodal diagnostic assistance.</p>
+</div>
+
+<hr />
+
+## 🚀 Quick Start: MedGemma Lens Setup for Kaggle Hackathon
+
+Follow these steps to get the frontend viewer and the MedGemma backend running locally.
+
+### 1. Environment Prerequisites
+Ensure you have **Node.js 18+** and **Python 3.10+** installed.
+
+```bash
+# Install Node.js 20.x
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Enable Yarn (Corepack)
+sudo corepack enable
+corepack prepare yarn@stable --activate
+```
+
+### 2. Frontend Installation & Launch
+```bash
+# Clone the repository
+git clone https://github.com/Quetzalcohuatl/Viewers.git
+cd Viewers
+
+# Install dependencies
+yarn install
+
+# Start the OHIF development server
+yarn run dev
+```
+
+### 3. MedGemma Backend Launch
+In a separate terminal window, start the Python reasoning engine:
+```bash
+# Navigate to your backend directory (where brain.py is located)
+python brain.py
+```
+
+<hr />
+
+<div align="center">
   <h1>OHIF Medical Imaging Viewer</h1>
   <p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer
 provided by the <a href="https://ohif.org/">Open Health Imaging Foundation (OHIF)</a>. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support <a href="https://www.dicomstandard.org/using/dicomweb/">DICOMweb</a>.</p>
